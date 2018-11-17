@@ -1,9 +1,18 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def index(req):
-    return render(req, 'pages/index.html')
+def domov(req):
+    return render(req, 'pages/domov.html')
 
-def about(req):
-    return render(req, 'pages/about.html')
+def onas(req):
+    return render(req, 'pages/onas.html')
+
+def jedilnik(req):
+    return render(req, 'pages/jedilnik.html')
+
+def malice(req):
+    return render(req, 'pages/malice.html')
+
+def kontakt(req):
+    return render(req, 'pages/kontakt.html')
 

@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Start buffer Area -->
+<div class="banner-top-menu">
+    <div class="container-fluid text-center">
+        <div class="content">
+                <h1>Tedenske malice</h1>
+                <div class="inline-banner-links">
+                    <a href="index.html">Domov</a>
+                    <i class="fas fa-arrow-right"></i>
+                    <a href="about.html">Malice</a>
+                </div>
+        </div>
+    </div>
+</div>
+<!-- End buffer Area -->
+
+
+<!-- Start menu-area Area -->
+<section class="menu-area section-gap" id="menu">
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="menu-content pb-70 col-lg-8">
+            <div class="title text-center">
+                <h1 class="mb-10">Tedenski meni malic</h1>
+                <p>Izbira malice a ali b</p>
+            </div>
+        </div>
+    </div>	
+
+    <ul class="filter-wrap filters col-lg-12 no-padding">
+        <li data-filter="*">Vsi dnevi</li>
+        <li id="ponedeljek" data-filter=".ponedeljek">Ponedeljek</li>
+        <li id="torek" data-filter=".torek">Torek</li>
+        <li id="sreda" data-filter=".sreda">Sreda</li>
+        <li id="cetrtek" data-filter=".cetrtek">Četrtek</li>
+        <li id="petek" data-filter=".petek">Petek</li>
+    </ul>
+    
+    <div class="filters-content" id="filters-content-id">
+        <div class="row grid">
+            <div class="col-md-6 all ponedeljek">
+                <div class="single-menu">
+                    <div class="title-wrap d-flex justify-content-between">
+                        <h4>Malica A</h4>
+                        <h4 class="price">5€</h4>
+                    </div>			
+                    <p>
+                        Ljubljanski zrezek, priloga, solata; Alergeni: (gluten,jajca,gorčično seme)
+                    </p>									
+                </div>					                               
+            </div>                           
+            <div class="col-md-6 all ponedeljek">
+                <div class="single-menu">
+                    <div class="title-wrap d-flex justify-content-between">
+                        <h4>Malica B</h4>
+                        <h4 class="price">5€</h4>
+                    </div>			
+                    <p>
+                        Špageti s slanino,feferoni , omaka, solata; Alergeni: (gluten ,gorčično seme)
+                    </p>									
+                </div>
+            </div>
+            <div class="col-md-6 all torek">
+                <div class="single-menu">
+                    <div class="title-wrap d-flex justify-content-between">
+                        <h4>Malica A</h4>
+                        <h4 class="price">5€</h4>
+                    </div>			
+                    <p>
+                        Morska rižota, solata; Alergeni: (gluten, ribe,gorčično seme)
+                    </p>									
+                </div>
+            </div>
+            <div class="col-md-6 all torek">
+                <div class="single-menu">
+                    <div class="title-wrap d-flex justify-content-between">
+                        <h4>Malica B</h4>
+                        <h4 class="price">5€</h4>
+                    </div>
+                    <p>
+                            Pleskavica v lepinji, jogurt; Alergeni: (gluten,jajca,gorčično seme)
+                    </p>									
+                </div>
+            </div>
+            <div class="col-md-6 all sreda">
+                <div class="single-menu">
+                    <div class="title-wrap d-flex justify-content-between">
+                        <h4>Piccolo Latte</h4>
+                        <h4 class="price">$49</h4>
+                    </div>
+                    <p>
+                        Usage of the Internet is becoming more common due to rapid advance.
+                    </p>									
+                </div>
+            </div>
+            <div class="col-md-6 all sreda">
+                <div class="single-menu">
+                    <div class="title-wrap d-flex justify-content-between">
+                        <h4>Ristretto</h4>
+                        <h4 class="price">$49</h4>
+                    </div>
+                    <p>
+                        Usage of the Internet is becoming more common due to rapid advance.
+                    </p>									
+                </div>
+            </div> 
+            <div class="col-md-6 all cetrtek">
+                <div class="single-menu">
+                    <div class="title-wrap d-flex justify-content-between">
+                        <h4>Piccolo Latte</h4>
+                        <h4 class="price">5€</h4>
+                    </div>
+                    <p>
+                        Usage of the Internet is becoming more common due to rapid advance.
+                    </p>									
+                </div>
+            </div>
+            <div class="col-md-6 all cetrtek">
+                <div class="single-menu">
+                    <div class="title-wrap d-flex justify-content-between">
+                        <h4>Ristretto</h4>
+                        <h4 class="price">5€</h4>
+                    </div>
+                    <p>
+                        Usage of the Internet is becoming more common due to rapid advance.
+                    </p>									
+                </div>
+            </div> 
+            <div class="col-md-6 all petek">
+                <div class="single-menu">
+                    <div class="title-wrap d-flex justify-content-between">
+                        <h4>Piccolo Latte</h4>
+                        <h4 class="price">5€</h4>
+                    </div>
+                    <p>
+                        Usage of the Internet is becoming more common due to rapid advance.
+                    </p>									
+                </div>
+            </div>
+            <div class="col-md-6 all petek">
+                <div class="single-menu">
+                    <div class="title-wrap d-flex justify-content-between">
+                        <h4>Ristretto</h4>
+                        <h4 class="price">5€</h4>
+                    </div>
+                    <p>
+                        Usage of the Internet is becoming more common due to rapid advance.
+                    </p>									
+                </div>
+            </div>                          
+        </div>
+    </div>
+    
+</div>
+</section>
+<!-- End menu-area Area -->	
+
+
+{% endblock %}

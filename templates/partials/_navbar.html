@@ -5,7 +5,7 @@
             <div class="container">
                   <div class="row justify-content-center">
                       <div id="logo">
-                        <a href="index.html"><img src="{% static 'img/titaniklogo.jpg' %}" alt="" title="" /></a>
+                        <a href="{% url 'domov' %}"><img src="{% static 'img/titaniklogo.jpg' %}" alt="" title="" /></a>
                       </div>
                   </div>			  					
             </div>
@@ -14,22 +14,22 @@
             <div class="main-menu-mobile">
                 <div id="mobilenav-burger-btn"></div>
                 <ul id="mobile-nav-content">
-                    <li><a href="index.html">Domov</a></li>
-                    <li><a href="about.html">O nas</a></li>
-                    <li><a href="menu.html">Jedilnik</a></li>
-                    <li><a href="week-menu.html">Malice</a></li>					          					          		          
-                    <li><a href="contact.html">Kontakti</a></li>
+                    <li><a href="{% url 'domov' %}">Domov</a></li>
+                    <li><a href="{% url 'onas' %}">O nas</a></li>
+                    <li><a href="{% url 'jedilnik' %}">Jedilnik</a></li>
+                    <li><a href="{% url 'malice' %}">Malice</a></li>					          					          		          
+                    <li><a href="{% url 'domov' %}">Kontakti</a></li>
                 </ul>
             </div>
                 
             <div class="row align-items-center justify-content-center d-flex">			
               <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                  <li><a href="index.html">Domov</a></li>
-                  <li><a href="about.html">O nas</a></li>
-                  <li><a href="menu.html">Jedilnik</a></li>
-                  <li><a href="week-menu.html">Malice</a></li>					          					          		          
-                  <li><a href="contact.html">Kontakti</a></li>
+                  <li><a href="{% url 'domov' %}">Domov</a></li>
+                  <li><a href="{% url 'onas' %}">O nas</a></li>
+                  <li><a href="{% url 'jedilnik' %}">Jedilnik</a></li>
+                  <li><a href="{% url 'malice' %}">Malice</a></li>					          					          		          
+                  <li><a href="{% url 'kontakt' %}">Kontakti</a></li>
                 </ul>
               </nav><!-- #nav-menu-container -->					      		  
             </div>
