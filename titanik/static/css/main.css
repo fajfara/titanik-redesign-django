@@ -1871,6 +1871,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #FEFAE1;
   font-size: 14px; }
 
+.active {
+  color: #EBC137 !important; }
+
 /* =================================== */
 /*  Homepage Styles
 /* =================================== */
@@ -2621,7 +2624,16 @@ h1, h2, h3, h4, h5, h6 {
   .food-menu .filters-content .col-sm-12, .food-menu .filters-content .col-xl-6 {
     background-color: #f9f9ff; }
   .food-menu .filters-content .box .menu-image {
-    height: 340px; }
+    height: 340px;
+    padding: 0;
+    position: relative;
+    overflow: hidden; }
+    .food-menu .filters-content .box .menu-image img {
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      object-fit: cover; }
   .food-menu .filters-content .box .menu-description {
     height: 340px;
     padding: 0px;
@@ -2660,6 +2672,16 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1rem; }
         .food-menu .filters-content .box .menu-description-content p span {
           font-size: .8rem; }
+      .food-menu .filters-content .box .menu-description-content .cena {
+        padding-top: 1.3rem; }
+        .food-menu .filters-content .box .menu-description-content .cena span {
+          font-size: 1.4rem;
+          font-weight: 600;
+          color: #2A5B84; }
+        .food-menu .filters-content .box .menu-description-content .cena p {
+          font-size: 1.5rem;
+          font-weight: 300;
+          color: #2A5B84; }
 
 /*-------- End Menu Area ------------*/
 /* =================================== */

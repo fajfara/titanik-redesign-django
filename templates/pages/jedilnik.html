@@ -2,160 +2,82 @@
 {% load static %}
 
 {% block content %}
-    <!-- start banner Area -->
-			<div class="banner-top-menu" style="margin-top: -55rem;">
-				<div class="container-fluid text-center" style="bottom: 8%; ">
-					<h1>Jedilnik</h1>
-					<div class="inline-banner-links">
-						<a href="index.html">Domov</a>
-						<i class="fas fa-arrow-right"></i>
-						<a href="about.html">Jedilnik</a>
+	<!-- start banner Area -->
+	<div class="banner-top-menu" style="margin-top: -55rem;">
+		<div class="container-fluid text-center" style="bottom: 8%; ">
+			<h1>Jedilnik</h1>
+			<div class="inline-banner-links">
+				<a href="{% url 'domov' %}">Domov</a>
+				<i class="fas fa-arrow-right"></i>
+				<a href="{% url 'jedilnik' %}">Jedilnik</a>
+			</div>
+		</div>
+	</div>
+	<!-- End banner Area -->			
+
+	<!-- Start food-menu Area -->
+	<section class="food-menu section-gap" id="food">
+		<div class="container-fluid">
+			<div class="row d-flex justify-content-center food-menu-title">
+				<div class="menu-content pb-70 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10">Naš jedilnik</h1>
+						<p>Sveže pripravljena hrana</p>
 					</div>
 				</div>
-			</div>
-			<!-- End banner Area -->			
+			</div>	
 
-			<!-- Start food-menu Area -->
-            <section class="food-menu section-gap" id="food">
-                <div class="container-fluid">
-					<div class="row d-flex justify-content-center food-menu-title">
-						<div class="menu-content pb-70 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10">Naš jedilnik</h1>
-								<p>Sveže pripravljena hrana</p>
-							</div>
-						</div>
-					</div>	
-
-                    <ul class="filter-wrap filters col-lg-12 col-md-6 no-padding">
-                        <li class="active-menu-filter" data-filter="*">Vse jedi</li>
-                        <li data-filter=".pica">Pice</li>
-                        <li data-filter=".kruhek">Kruhki</li>
-						<li data-filter=".kosilo">Kosila</li>
-						<li data-filter=".pijaca">Pijača</li>
-						
-                    </ul>
-                    
-                    <div class="filters-content">
-                        <div class="row grid">
-                            <div class="col-sm-12 col-xl-6 all pica box">
-								<div class="single-menu">
-									<div class="row">
-										<div class="col-sm-6 menu-image"
-										style="	background: url(../img/4letnicasi.jpg);
-												background-repeat: no-repeat;
-												background-size: cover;
-												background-position: center;
-										
-
-										"
-										>
-
+			<ul class="filter-wrap filters col-lg-12 col-md-6 no-padding">
+				<li class="active-menu-filter" data-filter="*">Vse jedi</li>
+				<li data-filter=".pica">Pice</li>
+				<li data-filter=".kruhek">Kruhki</li>
+				<li data-filter=".kosilo">Kosila</li>
+				<li data-filter=".pijaca">Pijača</li>
+				
+			</ul>
+			
+			<div class="filters-content">
+				<div class="row grid">
+					{% if jedi %}
+						{% for jed in jedi %}
+						<div class="col-sm-12 col-xl-6 all {{ jed.tipIzdelka }} box">
+							<div class="single-menu">
+								<div class="row">
+									<div class="col-sm-6 menu-image">
+										<img src=" {{ jed.slika.url }} " alt="">
+									</div>
+								<div class="col-sm-6 menu-description no-padding">
+									<div class="menu-description-content text-center">
+										<div class="icon">
+											<i class="fas fa-utensils"></i>
 										</div>
-										<div class="col-sm-6 menu-description no-padding">
-											<div class="menu-description-content text-center">
-												<div class="icon">
-													<i class="fas fa-utensils"></i>
-												</div>
-												<h4>Pica 4. letni časi</h4>
-												<p>
-													(testo, pelati, šunka, sir, gobe, origano)<br>
-													<span>ALERGENI: (gluten, mleko, volčji bob)</span>
-												</p>
+										<h4>{{ jed.naziv }}</h4>
+										<p>
+										( {{ jed.sestavine }} )<br>
+										<span>ALERGENI: ( {{ jed.alergeni }} )</span>
+										</p>
+											<div class="cena">
+												<span>Cena:</span><br>
+												<p>7€</p>
 											</div>
 										</div>
 									</div>
-								</div>					                               
-							</div> 
-							<div class="col-sm-12 col-xl-6 all pica box">
-									<div class="single-menu">
-										<div class="row">
-											<div class="col-sm-6 menu-image"
-											style="	background: url(../img/4letnicasi.jpg);
-													background-repeat: no-repeat;
-													background-size: cover;
-													background-position: center;
-											"
-											>
-	
-											</div>
-											<div class="col-sm-6 menu-description no-padding">
-												<div class="menu-description-content text-center">
-													<div class="icon">
-														<i class="fas fa-utensils"></i>
-													</div>
-													<h4>Pica 4. letni časi</h4>
-													<p>
-														(testo, pelati, šunka, sir, gobe, origano)<br>
-														<span>ALERGENI: (gluten, mleko, volčji bob)</span>
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>					                               
-							</div> 
-							<div class="col-sm-12 col-xl-6 all pica box">
-									<div class="single-menu">
-										<div class="row">
-											<div class="col-sm-6 menu-image"
-											style="	background: url(../img/4letnicasi.jpg);
-													background-repeat: no-repeat;
-													background-size: cover;
-													background-position: center;
-											"
-											>
-	
-											</div>
-											<div class="col-sm-6 menu-description no-padding">
-												<div class="menu-description-content text-center">
-													<div class="icon">
-														<i class="fas fa-utensils"></i>
-													</div>
-													<h4>Pica 4. letni časi</h4>
-													<p>
-														(testo, pelati, šunka, sir, gobe, origano)<br>
-														<span>ALERGENI: (gluten, mleko, volčji bob)</span>
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>					                               
-							</div> 
-							<div class="col-sm-12 col-xl-6 all pica box">
-									<div class="single-menu">
-										<div class="row">
-											<div class="col-sm-6 menu-image"
-											style="	background: url(../img/4letnicasi.jpg);
-													background-repeat: no-repeat;
-													background-size: cover;
-													background-position: center;
-											"
-											>
-	
-											</div>
-											<div class="col-sm-6 menu-description no-padding">
-												<div class="menu-description-content text-center">
-													<div class="icon">
-														<i class="fas fa-utensils"></i>
-													</div>
-													<h4>Pica 4. letni časi</h4>
-													<p>
-														(testo, pelati, šunka, sir, gobe, origano)<br>
-														<span>ALERGENI: (gluten, mleko, volčji bob)</span>
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>					                               
-							</div>
-                                                        
+								</div>
+							</div>					                               
 						</div>
-                                                     
-                                                        
-                        </div>
-                    </div>
-                    
-                </div>
-            </section>
-            <!-- End food-menu Area -->	
+						{% endfor %}
+					{% else %}
+						<div class="col-md-12">
+							<p>No items found</p>
+						</div>
+					{% endif %}							
+				</div>
+											 
+												
+				</div>
+			</div>
+			
+		</div>
+	</section>
+	<!-- End food-menu Area -->	
 {% endblock %}

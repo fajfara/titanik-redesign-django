@@ -12,6 +12,7 @@ $(document).ready(function() {
     $(".fitscreen").css("height", fitscreen);
 
 
+    
 
     //------- Niceselect  js --------//  
 
@@ -108,8 +109,7 @@ $(document).ready(function() {
       $('.filters li').click(function(){
         let pageLocation = window.location.pathname;
         console.log(pageLocation);
-        if(pageLocation.includes("/jedilnik")){
-            console.log("testing active jedilnik");
+        if(pageLocation.includes("/jedilnik/")){
             $('.filters li').removeClass('active-menu-filter');
             $(this).addClass('active-menu-filter');
             

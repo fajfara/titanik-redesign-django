@@ -32,12 +32,15 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
+    'jedilnik.apps.JedilnikConfig',
+    'malice.apps.MaliceConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'multiselectfield',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +79,11 @@ WSGI_APPLICATION = 'titanik.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'titanik',
+        'USER': 'postgres',
+        'PASSWORD': 'Zero666!34',
+        'HOST': 'localhost'
     }
 }
 
@@ -123,3 +129,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'titanik/static')
 ]
+
+# Media folder settings
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'

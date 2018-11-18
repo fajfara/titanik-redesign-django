@@ -7,9 +7,6 @@ def domov(req):
 def onas(req):
     return render(req, 'pages/onas.html')
 
-def jedilnik(req):
-    return render(req, 'pages/jedilnik.html')
-
 def malice(req):
     return render(req, 'pages/malice.html')
 
